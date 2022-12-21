@@ -1,8 +1,9 @@
 import './wishlist.css'
 
-export const Wishlist = ()=>{
+export const Wishlist = ({visible})=>{
+    console.log(visible)
     return(
-        <div className="overlay">
+        <div onClick={visible(false)} className="overlay">
             <div className="wishlist">
             <h1>Favorites</h1>
         </div>

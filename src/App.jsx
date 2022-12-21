@@ -6,7 +6,7 @@ import { Wishlist } from './components/Wishlist'
 function App() {
 
   const [data, setData] = useState([])
-  const [movie, setMovie] = useState('hell')
+  const [movie, setMovie] = useState('sci-fi')
   const [get, setGet] = useState(false)
   const [wishListActive, setWishListActive] = useState(false)
 
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-    {wishListActive && <Wishlist></Wishlist>}
+    {wishListActive && <Wishlist visible={setWishListActive}></Wishlist>}
     <div className="App">
       
       <header>

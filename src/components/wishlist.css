@@ -22,3 +22,9 @@
     padding: 3rem;
     border-radius: 5px;
 }
+
+.wishlist-favorites{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
