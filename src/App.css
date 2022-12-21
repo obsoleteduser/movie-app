@@ -7,6 +7,8 @@
   width: 100vw;
   gap: 3rem;
   padding: 3rem;
+  background-image: url(./assets/background-image-by-Tahir.jpg);
+  background-size: contain;
 }
 
 header{
@@ -19,8 +21,9 @@ header{
 .search{
   background-color: white;
   padding: 2rem;
-  width: 50rem;
+  width: 55rem;
   display: flex;
+  height: 10rem;
   justify-content: center;
   align-items: center;
   gap: 3rem;
@@ -39,9 +42,9 @@ header{
   justify-content: center;
   align-items: center;
   border: unset;
-  background-color: green;
+  background-color: red;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1.5rem;
   cursor: pointer;
 }

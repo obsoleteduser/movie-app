@@ -27,3 +27,29 @@
     top: 74%;
     cursor: pointer;
 }
+
+
+@-webkit-keyframes borderBlink {    
+    from, to {    
+        border-color: transparent    
+    }    
+    50% {    
+        border-color: black    
+    }    
+}    
+@keyframes borderBlink {    
+    from, to {    
+        border-color: transparent    
+    }    
+    50% {    
+        border-color: black    
+    }    
+}    
+.borderBlink{    
+    border:1px solid black;
+   
+}
+.borderBlink:hover {    
+    -webkit-animation: borderBlink 1s step-end infinite;    
+    animation: borderBlink 1s step-end infinite;    
+}

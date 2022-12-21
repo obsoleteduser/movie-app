@@ -2,7 +2,7 @@ import './card.css'
 
 export const Card = ({img, title, year})=>{
     return(
-        <div className="card">
+        <div className="card borderBlink">
             
             <i className="fa-regular fa-heart heart"></i>
             
