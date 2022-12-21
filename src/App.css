@@ -9,6 +9,12 @@
   padding: 3rem;
 }
 
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
 
 .search{
   background-color: white;

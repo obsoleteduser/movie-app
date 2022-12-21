@@ -1,0 +1,24 @@
+.overlay{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.wishlist{
+    width: 40rem;
+    height: 50rem;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    border-radius: 5px;
+}
