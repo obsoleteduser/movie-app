@@ -3,6 +3,7 @@ import { Spinner } from 'react-bootstrap'
 import { PuffLoader } from 'react-spinners'
 import './App.css'
 import { Card } from './components/Card'
+import { Wishlist } from './components/Wishlist'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   const [get, setGet] = useState(false)
   const [loading, setLoading] = useState(true)
   const [favorites, setFavorites] = useState([])
+  const [active, setActive] = useState(false)
   const searchRef = useRef()
 
   useEffect(() => {
@@ -52,7 +54,7 @@ function App() {
 
   return (
     <>
-
+    <Wishlist active={active} setActive={setActive}></Wishlist>
       <div onLoad={() => { searchRef.current.focus() }} className="App">
 
         <header>
@@ -63,13 +65,13 @@ function App() {
             <button onClick={handleSearch} className="search">Search</button>
 
           </div>
-          <i onClick={() => { setWishListActive(true) }} style={{ color: "white", fontSize: '4rem', cursor: 'pointer' }} className="fa-regular fa-heart"></i>
+          <i onClick={() => { setActive(true) }} style={{ color: "white", fontSize: '4rem', cursor: 'pointer' }} className="fa-regular fa-heart"></i>
         </header>
         <div className="movies">
           { loading ? loader():
             data?.length ? data.map((movie, index) => {
               return (
-                <Card key={index} title={movie.Title} year={movie.Year} img={movie.Poster}></Card>
+                <Card favorites={favorites} setFavorites={setFavorites} key={index} title={movie.Title} year={movie.Year} img={movie.Poster}></Card>
               )
             }) : notFound()
           }
