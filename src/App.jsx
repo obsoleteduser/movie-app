@@ -10,6 +10,7 @@ function App() {
   const [movie, setMovie] = useState('sci-fi')
   const [get, setGet] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [favorites, setFavorites] = useState([])
   const searchRef = useRef()
 
   useEffect(() => {
@@ -57,7 +58,7 @@ function App() {
         <header>
           <div onChange={movieHandler} className="search">
             <img className='search-icon' src="src\assets\magnifying-glass-solid.svg" alt="" />
-            <input onKeyDown={handleKeypress} ref={searchRef} placeholder='Search' type="text" className="search-box" />
+            <input onKeyDown={handleKeypress} ref={searchRef} placeholder='Finds any movie' type="text" className="search-box" />
 
             <button onClick={handleSearch} className="search">Search</button>
 
