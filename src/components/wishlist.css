@@ -16,7 +16,7 @@
 }
 
 .wishlist{
-    width: 40rem;
+    width: 80rem;
     height: 50rem;
     background-color: white;
     color: black;
@@ -26,10 +26,14 @@
     align-items: center;
     padding: 3rem;
     border-radius: 5px;
+    overflow-y: scroll;
+    gap: 3rem;
 }
 
 .wishlist-favorites{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
     align-items: center;
+    background-color: white;
 }

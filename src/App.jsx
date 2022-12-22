@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { Spinner } from 'react-bootstrap'
 import { PuffLoader } from 'react-spinners'
 import './App.css'
 import { Card } from './components/Card'
@@ -54,7 +53,7 @@ function App() {
 
   return (
     <>
-    <Wishlist active={active} setActive={setActive}></Wishlist>
+    <Wishlist favorites={favorites} setFavorites={setFavorites} active={active} setActive={setActive}></Wishlist>
       <div onLoad={() => { searchRef.current.focus() }} className="App">
 
         <header>
@@ -71,7 +70,7 @@ function App() {
           { loading ? loader():
             data?.length ? data.map((movie, index) => {
               return (
-                <Card favorites={favorites} setFavorites={setFavorites} key={index} title={movie.Title} year={movie.Year} img={movie.Poster}></Card>
+                <Card data={data} favorites={favorites} setFavorites={setFavorites} key={index} title={movie.Title} year={movie.Year} img={movie.Poster}></Card>
               )
             }) : notFound()
           }
